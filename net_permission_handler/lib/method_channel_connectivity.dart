@@ -12,11 +12,11 @@ import 'src/utils.dart';
 class MethodChannelConnectivity extends ConnectivityPlatform {
 
 
-  MethodChannel methodChannel = const MethodChannel('dev.fluttercommunity.plus/connectivity');
+  MethodChannel methodChannel = const MethodChannel('dev/connectivity');
 
 
 
-  EventChannel eventChannel = const EventChannel('dev.fluttercommunity.plus/connectivity_status');
+  EventChannel eventChannel = const EventChannel('dev/connectivity_status');
 
   Stream<ConnectivityResult>? _onConnectivityChanged;
 
