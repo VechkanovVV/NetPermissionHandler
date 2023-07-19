@@ -1,4 +1,4 @@
-package dev.fluttercommunity.plus.connectivity;
+package dev.fluttercommunity.connectivity;
 
 import android.Manifest;
 import android.content.Context;
