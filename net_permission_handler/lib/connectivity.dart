@@ -13,16 +13,15 @@ export 'src/connectivity_plus_linux.dart'
 
 
 class Connectivity {
-  factory Connectivity() {
-    _singleton ??= Connectivity._();
-    return _singleton!;
-  }
-  Connectivity._();
-  static Connectivity? _singleton;
+  static Connectivity? _instance;
+  static ConnectivityPlatform _platform = ConnectivityPlatform.instance;
 
-  static ConnectivityPlatform get _platform {
-    return ConnectivityPlatform.instance;
+  factory Connectivity() {
+    _instance ??= Connectivity._();
+    return _instance!;
   }
+
+  Connectivity._();
 
   Stream<ConnectivityResult> get onConnectivityChanged {
     return _platform.onConnectivityChanged;
