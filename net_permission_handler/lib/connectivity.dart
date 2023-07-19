@@ -8,8 +8,7 @@ import 'package:connectivity_plus_platform_interface/connectivity_plus_platform_
 export 'package:connectivity_plus_platform_interface/connectivity_plus_platform_interface.dart'
     show ConnectivityResult;
 
-export 'src/connectivity_plus_linux.dart'
-    if (dart.library.html) 'src/connectivity_plus_web.dart';
+
 
 
 class Connectivity {
