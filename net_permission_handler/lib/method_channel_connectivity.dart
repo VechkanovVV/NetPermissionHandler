@@ -2,7 +2,7 @@
 
 import 'dart:async';
 
-import 'package:connectivity_plus_platform_interface/connectivity_plus_platform_interface.dart';
+import 'connectivity_platform_interface.dart';
 import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 

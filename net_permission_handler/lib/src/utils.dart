@@ -1,4 +1,5 @@
-import 'package:connectivity_plus_platform_interface/connectivity_plus_platform_interface.dart';
+import '../connectivity.dart';
+
 
 /// Convert a String to a ConnectivityResult value.
 ConnectivityResult parseConnectivityResult(String state) {

@@ -1,5 +1,6 @@
-import 'package:connectivity_plus_platform_interface/connectivity_plus_platform_interface.dart';
+
 import 'connectivity.dart';
+import 'connectivity_platform_interface.dart';
 
 class ConnectivityService {
 
