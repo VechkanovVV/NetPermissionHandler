@@ -24,7 +24,7 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 33
 
-    namespace 'dev.fluttercommunity.connectivity'
+    namespace 'dev.connectivity'
 
     compileOptions {
       sourceCompatibility JavaVersion.VERSION_1_8
