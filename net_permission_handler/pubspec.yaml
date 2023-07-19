@@ -10,7 +10,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: dev.fluttercommunity.connectivity
+        package: dev.connectivity
         pluginClass: ConnectivityPlugin
 
 

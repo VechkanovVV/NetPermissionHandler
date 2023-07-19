@@ -1,6 +1,6 @@
 
 
-package dev.fluttercommunity.connectivity;
+package dev.connectivity;
 
 import android.net.ConnectivityManager;
 import android.net.Network;

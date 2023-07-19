@@ -1,6 +1,6 @@
 
 
-package dev.fluttercommunity.connectivity;
+package dev.connectivity;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

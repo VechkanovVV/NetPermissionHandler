@@ -1,6 +1,6 @@
 
 
-package dev.fluttercommunity.connectivity;
+package dev.connectivity;
 
 import androidx.annotation.NonNull;
 import io.flutter.plugin.common.MethodCall;
