@@ -1,5 +1,5 @@
 name: netPermissionHandler
-description: Flutter plugin for discovering the state of the network (WiFi & mobile/cellular) connectivity on Android.
+description: Flutter plugin for checking connectivity (wifi/mobile) and get permission to the camera on Android.
 
 
 environment:
@@ -10,8 +10,8 @@ flutter:
   plugin:
     platforms:
       android:
-        package: dev.connectivity
-        pluginClass: ConnectivityPlugin
+        package: dev.netPermissionHandler
+        pluginClass: NetPermissionPlugin
 
 
 dependencies:

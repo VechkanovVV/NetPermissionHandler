@@ -26,4 +26,5 @@ abstract class ConnectivityPlatform extends PlatformInterface {
     throw UnimplementedError(
         'get onConnectivityChanged has not been implemented.');
   }
+
 }
