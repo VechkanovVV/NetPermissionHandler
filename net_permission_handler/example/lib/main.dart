@@ -1,13 +1,6 @@
-
 import 'package:flutter/material.dart';
-
 import 'dart:async';
-
-import 'package:flutter/services.dart';
-import 'package:netPermissionHandler/connectivity_service.dart';
 import 'package:netPermissionHandler/net_permission_handler.dart';
-
-
 
 class ConnectionStatusWidget extends StatefulWidget {
   @override
@@ -15,8 +8,7 @@ class ConnectionStatusWidget extends StatefulWidget {
 }
 
 class _ConnectionStatusWidgetState extends State<ConnectionStatusWidget> {
-  String _connectionStatus = 'Проверка соединения...';
-  final ConnectivityService _connectivityService = ConnectivityService();
+  String _connectionStatus = 'Checking connection';
 
   @override
   void initState() {
@@ -25,30 +17,37 @@ class _ConnectionStatusWidgetState extends State<ConnectionStatusWidget> {
   }
 
   void _initConnectivityListener() {
-    _connectivityService.connectivityStatusStream.listen((status) {
+    NetPermissionHandler.startNetworkStatusListener((status) {
       setState(() {
         _connectionStatus = status;
       });
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Состояние соединения'),
+        title: Text('Connection Status'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Состояние соединения: $_connectionStatus'),
+            Text('Connection Status: $_connectionStatus'),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {
-                // Запрос разрешения камеры
+                // Request camera permission
+                bool cameraPermissionGranted = await NetPermissionHandler.requestCameraPermission();
+                if (cameraPermissionGranted) {
+                  // Handle camera permission granted
+                } else {
+                  // Handle camera permission denied
+                }
               },
-              child: Text('Запросить разрешение камеры'),
+              child: Text('Request Camera Permission'),
             ),
           ],
         ),
