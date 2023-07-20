@@ -40,9 +40,17 @@ import 'package:netPermissionHandler/net_permission_handler.dart';
 - Request and manage camera permission.
 
 ## Plugin methods that you can use
-* checkConnection() - checking the network connection, the result of which is the string: "wifi" or "mobile" or "none"
-* requestCameraPermission() - requests permission to use the camera, requests permission to use the camera, the result is the bool value (this is not properly working at the moment)
-
+* ```checkConnection()``` - checking the network connection, the result of which is the string: "wifi" or "mobile" or "none"
+* ```requestCameraPermission()``` - requests permission to use the camera, requests permission to use the camera, the result is the bool value (this is not properly working at the moment)
+   
+*  To check if the connection to network, you may use this part of code:
+```
+NetPermissionHandler.startNetworkStatusListener((status) {
+      setState(() {
+        _connectionStatus = status;
+      });
+  }); 
+```
 
 ## Frameworks or Technologies Used
 
@@ -57,6 +65,9 @@ import 'package:netPermissionHandler/net_permission_handler.dart';
 
 [![NetPermissionHandler](https://img.shields.io/badge/NetPermissionHandler-v1.0-blue)](https://www.example.com/netpermissionhandler)
 
+[![Dart](https://img.shields.io/badge/Dart-v2.14.4-blue)](https://dart.dev/)
+
+[![Flutter](https://img.shields.io/badge/Flutter-v2.5-blue)](https://flutter.dev/)
 ## For Users
 
 Thank you for choosing NetPermissionHandler! We are committed to providing you with a seamless experience in managing network connectivity and camera permissions in your mobile applications. If you encounter any issues or have any feature requests, please feel free to reach out to our support team. We value your feedback and will continue to improve NetPermissionHandler to meet your needs. Happy coding!
